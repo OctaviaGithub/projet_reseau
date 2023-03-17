@@ -1,10 +1,12 @@
 # Créé par Ordinateur, le 15/03/2023 en Python 3.7
 
+import module_profil
+
 class chating:
 
     def __init__(self):
         self.__message = []
-        self.__personnage = profil()
+        self.__personnage = module_profil.profil()
 
     def verif_age(self):
         '''Permettant de vérifier si vous êtes dans la limite d'âge.'''

@@ -15,6 +15,8 @@ class profil :
         self.__url = None
         self.__couleur_pseudo = None
         self.__pseudonyme = None
+        self.__role = "User"
+        self.__liste_user=["BasicUser","Moderator","Administrator","Owner"]
         self.création_compte()
 
     def création_compte(self):
@@ -31,9 +33,19 @@ class profil :
             self.new_pseudonyme()
         print("#Console | Compte créé avec succés !")
 
+    def change_role(self,new_role):
+        '''Permet de changer le rôle de l'utilisateur.'''
+        for i in self.__liste_user :
+            if new_role == i :
+                self.__role = new_role
+
     def get_pseudonyme(self):
         '''Permet de return le pseudonyme de l'utilisateur.'''
         return self.__prenom
+
+    def get_role(self):
+        '''Permet de return le role de l'User.'''
+        return self.__role
 
     def get_age(self):
         '''Permet de return l'âge de l'utilisateur.'''
